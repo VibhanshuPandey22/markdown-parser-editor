@@ -119,6 +119,15 @@ export const tokenize = (input) => {
     }
 
     if (input.startsWith("```", i)) {
+      let start = i - 1;
+      while (start >= 0 && input[start] === " ") {
+        start--;
+      }
+      if (start >= 0 && input[start] !== "\n") {
+        tokens.push({ type: "plain", content: input[i] });
+        i++;
+        continue;
+      }
       let newLineInd = input.indexOf("\n", i + 3);
       if (newLineInd !== -1 && input.slice(i + 3, newLineInd).trim() === "") {
         i = handleCodeBlocks(input, tokens, newLineInd, "```", "codeBlock");
