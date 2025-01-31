@@ -165,8 +165,8 @@ export const mdSyntaxHelp = [
     id: 15,
     heading: "CODE BLOCK",
     syntax: `\`\`\`
-    console.log("Triple backticks inside a code block - \`\`\`");
-  \`\`\``,
+  console.log("Triple backticks inside a code block - \`\`\`");
+\`\`\``,
     output: (
       <>
         <pre className="bg-gray-800 text-white p-4 rounded-md overflow-auto">
