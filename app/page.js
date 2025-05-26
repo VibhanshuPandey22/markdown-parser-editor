@@ -1,8 +1,6 @@
 "use client";
 import { useState } from "react";
-import { HelpModal } from "@components/HelpModal";
 import { HomeScreen } from "@components/HomeScreen";
-import { MarkdownEditor } from "@components/MarkdownEditor";
 
 const Home = () => {
   const [input, setInput] = useState("");
